@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-*{
+/* *{
     margin: 0;
     padding: 0;
 }  
@@ -47,3 +47,27 @@ body {
     height:120vh;
     position: relative;
 }
+
+.presentation h1 {
+    font-size: 6em;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top:32%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.presentation h2{
+    font-size: 2em;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top:42%;
+    transform: translate(-50%, -50%);
+    font-weight: lighter;
+    width: 42%;
+    text-align: center;
+}
+
+ */
