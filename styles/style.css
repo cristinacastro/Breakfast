@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-/* *{
+ *{
     margin: 0;
     padding: 0;
 }  
@@ -10,14 +10,23 @@ body {
     font-size:10px;
 }
 
+/* nav bar menu */
 .logo img{
-    width: 180px;
+    width: 200px;
 }
 
+.logo {
+    height: 70px;
+}
+
+/* conjunt de links*/
 .nav-bar{
-    width: 26%;
+    width: 85%;
+    margin: 0 auto;
+    height: 40px;
 }
 
+/* cada un dels links*/
 .nav-bar-ul{
     display:flex;
     justify-content: space-between;
@@ -32,42 +41,118 @@ body {
     color: black;
 }
 
-.menu {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 12px 30px;
-}
-
+/* background picture */
 .presentation{
     background: url(/img/home_background.jpg);
     background-position:0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height:120vh;
+    height:80vh;
     position: relative;
 }
 
 .presentation h1 {
-    font-size: 6em;
-    color: #fff;
+    font-size: 4em;
+    color:black;
     position: absolute;
     left: 50%;
     top:32%;
     transform: translate(-50%, -50%);
     text-align: center;
+    line-height: 1em;
 }
 
 .presentation h2{
     font-size: 2em;
-    color: #fff;
+    color: black;
     position: absolute;
     left: 50%;
-    top:42%;
+    top:55%;
     transform: translate(-50%, -50%);
-    font-weight: lighter;
-    width: 42%;
+    font-weight: bold;
+    width: 50%;
     text-align: center;
 }
 
- */
+hr{
+    width: 50%;
+    color: rgb(190, 188, 188);
+    margin: 30px auto;
+}
+
+ /* input form section */
+
+ .search-form-section div{
+    width: 100%;
+    height: 185px;
+ }
+
+ .search-form-section h2 {
+    font-size: 2em;
+    text-align: center;
+    width: 60%;
+    justify-content: center;
+    margin:0 auto;
+    padding:20px;
+    font-weight: bold;
+ }
+
+ .search-form{
+     display:flex;
+     width: 50%;
+     flex-direction: column;
+     align-items: center;
+     margin: 0 auto;
+ }
+
+ .search-form ::placeholder {
+     font-size: 0.8em;
+     text-align: center;
+ }
+
+ .search-form > button {
+    margin: 15px 50px;
+    font-size: 1.3em;
+    font-family: montserrat;
+    font-weight: bold;
+    letter-spacing:0.3px;
+    background-color: black;
+    color: white;
+    padding:7px 20px 7px 20px;   
+ }
+
+  /* recipes cagetories section */
+
+.recipe-category div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 12px;
+}
+
+h3{
+    font-size: 1.8em;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.recipe-category p{
+    font-size: 1.5em;
+    margin: 0px 30px;
+}
+
+.recipe-category-btn{
+    margin: 15px 50px;
+    font-size: 1.3em;
+    font-family: montserrat;
+    font-weight: bold;
+    letter-spacing:0.3px;
+    background-color: black;
+    color: white;
+    padding:10px 10px 10px 10px;
+}
+
+.recipe-category img{
+    width: 100%;
+}
