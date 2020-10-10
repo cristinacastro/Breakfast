@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project1</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">  
   </head>
 
   <body>
@@ -23,32 +23,23 @@
              </ul>
            </nav>
          </div>
-        </header>
+    </header>
 
-    <!-- Section recipe instructions -->
-    <section class = recipe-extended-info>
-        <div class = "intruction-icons">
-            <div class = "icon-format">
-                <div>
-                    <img src="" alt="">
-                </div>
-                <p>40 min</p>
+    <!-- main - log in -->
+    <main>
+        <section class="login">
+          <div class="form-wrapper">
+            <form class="login-form" action="">
+              <input type="email" id="email" placeholder="Introduce your email" />
+              <input type="password" id="password" placeholder="Introduce your password" />
+              <button type="submit" class="button" id="login-button">Login</button>
+            </form>
+            <div class="message-container">
             </div>
-            <div class = "icon-format">
-                <div>
-                    <img src="" alt="">
-                </div>
-                <p>3-4 servings</p>
-            </div>
-            <div class = "icon-format">
-                <div>
-                    <img src="" alt="">
-                </div>
-                <p>Easy</p>
-            </div>      
-        </div>
-        <h3>Recipe Name</h3>
-        <p>Intructions</p>
-    </section>
-  </body>
+          </div>
+        </section>
+      </main>
+      <script src="scripts/Login.js"></script>
+      <script src="scripts/Database.js"></script>
+    </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project1</title>
+    <link rel="stylesheet" href="/styles/style.css">  
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class= "header">
+        <div class="menu">
+          <div class = "logo">
+            <img src="" alt="Logo icon" href="index.html">
+          </div>
+          <nav class= "nav-bar">
+             <ul class= "nav-bar-ul">
+              <li><a class="nav-bar-item" href="recipes.html">Recipes</a></li>
+              <li><a class="nav-bar-item" href="signup.html">Sign Up</a></li>
+              <li><a class="nav-bar-item" href="login.html">Log In</a></li>
+              <li><a class="nav-bar-item" href="faq.html">FAQ</a></li>
+             </ul>
+           </nav>
+         </div>
+    </header>
+
+    <!-- main - sign up -->
+    <main>
+        <section class = "signup">
+            <div class = "form-wrapper">
+                <form class = "signup-form" action="">
+                    <input type="text" id ="name" placeholder="Introduce your name "/>
+                    <input type="text" id="email" placeholder="Introduce your email" />
+                    <input type="password" id="password" placeholder="Set a password" />
+                    <input type="password" id="repeat-password" placeholder="Repeat the password" />
+                    <button type="submit" class="button" id="signup-button" disabled>Sign Up</button>
+                </form>
+                <div class ="message-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/Signup.js"></script>
+    <script src="scripts/User.js"></script>
+    <script src="scripts/Database.js"></script>
+    <script src="scripts/Validator.js"></script>
+
+  </body>
+</html>
