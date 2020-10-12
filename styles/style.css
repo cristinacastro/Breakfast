@@ -236,10 +236,11 @@ hr{
   padding:10px;
   width:25%;
 }
+
 .recipe-extended-info > p{
  font-size: 1.5em;
  width: 70%;
- margin:10px auto;
+ margin:10px auto 50px auto;
  text-align: justify;
 }
 
@@ -248,7 +249,7 @@ hr{
 .signup-form input{
     margin:10px;
 }
-.signup-form button{
+.button{
     display:flex;
     flex-direction: column;
     margin: 10px auto;
@@ -261,10 +262,14 @@ hr{
     margin-bottom: 10px;
 }
 
+.button:disabled{
+    background-color: rgb(138, 138, 138);
+}
+
 .form-wrapper{
     align-items: center;
     text-align: center;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 .signup img {
@@ -291,19 +296,6 @@ hr{
     margin:10px;
 }
 
-.login-form button{
-    display:flex;
-    flex-direction: column;
-    margin: 10px auto;
-    font-size: 1.1em;
-    font-family: montserrat;
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    padding:10px 20px 10px 20px;
-    margin-bottom: 10px;
-}
-
 .login h2{
     text-align: center;
     font-size: 2em;
@@ -320,6 +312,26 @@ hr{
     width: 70%;
     display: flex;
     margin-top:30px;
+}
+
+.message-container{
+    width: 100%;
+    max-width: 800px;
+}
+
+.message-container p{
+    background-color:red;
+    padding: 20px;
+    margin: 10px 0;
+    color: white;
+}
+
+.message-container p.correct-message {
+    background-color: green;
+    color:white;
+    margin:10px 0;
+    padding: 20px;
+
 }
 
 /* faq page */
@@ -366,6 +378,8 @@ hr{
     font-size: 2em;
 }
 
+
+
 /* @media */
 
 @media (max-width: 330px){
@@ -405,7 +419,7 @@ hr{
     }
 
     .search-form-section div{
-        height: 145px;
+        height: 165px;
         margin-top: 25px;
      }
 
@@ -422,6 +436,10 @@ hr{
     .recipe-category-btn{
         margin: 15px auto 10px auto;
         width: 42%;
+    }
+
+    .recipe-extended-info-background{
+        height: 65vh;
     }
 
 }
@@ -441,4 +459,70 @@ hr{
     .search-form input{
         padding: 10px 100px;
     }
-}
+
+    .categories-container{
+        display:flex;
+        justify-content:center;
+        flex-direction:row;
+        flex-wrap:wrap;  
+        margin:15px;
+    }
+
+    .recipe-category {
+        width: 33%;
+    }
+    
+    .recipe-category div{
+        margin: 5px;
+    }
+
+    .recipe-category-btn{
+        width:45% ;
+    }
+
+    .recipe-extended-info-background{
+        height: 95vh;
+    }
+
+    .icon-format img{
+        width: 50px;
+    }
+    
+    .icon-format p{
+        font-size: 0.9em;
+    }
+    
+    .icon-format{
+      width:20%;
+    }
+
+    .instruction-icons{
+        margin: 60px auto;
+    }
+
+    .signup img {
+        width: 60%;
+        margin-top:60px;
+    }
+    
+    .signup h2{
+        font-size: 3em;
+        margin-top: 55px;
+    }
+    
+    .login img {
+        width: 60%;
+        margin-top:60px;
+    }
+    
+    .login h2{
+        font-size: 3em;
+        margin-top: 55px;
+    }
+
+    .button {
+        font-size: 1.6em;
+        padding:10px 30px;
+        margin:25px auto 40px auto;
+    }
+
