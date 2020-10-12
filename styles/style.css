@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
  *{
     margin: 0;
@@ -6,19 +7,19 @@
 }  
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Karla','Montserrat', sans-serif;
     font-size:10px;
 }
 
 /* nav bar menu */
 .logo img{
-    width: 200px;
+    width: 120px;
 }
 
 .logo{
     height: 70px;
     text-align: center;
-    margin-top:15px;
+    margin-top:50px;
 }
 
     /* conjunt de links*/
@@ -35,7 +36,6 @@ body {
     align-items: center;
     list-style: none;
     font-size: 1.5em; 
-    font-weight: bold;
 }
 
 .nav-bar-ul a {
@@ -159,6 +159,11 @@ h3{
 }
 
   /* recipes page */
+
+.categories-displayed {
+    background-color: whitesmoke;
+}
+
 .recipes-container {
         display:flex;
         justify-content:center;
@@ -169,7 +174,6 @@ h3{
 
 .recipe-general-info {
     text-align:center;
-    background-color: rgb(241, 241, 241);    
     box-sizing:border-box;
     margin: 5px;
     padding:12px;
@@ -379,7 +383,6 @@ hr{
 }
 
 
-
 /* @media */
 
 @media (max-width: 330px){
@@ -404,7 +407,8 @@ hr{
     .logo{
         width: 200px;
         height: auto;
-        align-items: center;        
+        align-items: center;  
+        margin-bottom: 45px;      
     }
 
     .menu {
