@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project1</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="#">
   </head>
 
   <body>
@@ -12,7 +13,7 @@
      <header class= "header">
        <div class="menu">
          <div class = "logo">
-           <img src="img/logo-icon.jpg" alt="Logo icon">
+          <a href="index.html"><img src="img/logo-icon.jpg" alt="Logo icon"></a>
          </div>
          <nav class= "nav-bar">
             <ul class= "nav-bar-ul">
@@ -36,7 +37,7 @@
               <h2>What's your favorite ingredient?</h2>
               <form action="" method="get" class="search-form">
                 <label for="search"></label>
-                <input type="text" id="search" name="search" placeholder="I'm in the mood for...">
+                <input type="text" id="ingredient-search" name="search" placeholder="I'm in the mood for...">
                 <button type="submit">Search</button>
               </form>
           </div>
@@ -54,36 +55,39 @@
          <article class = "recipe-category">
              <div>
                  <div>
-                     <img src="/img/bowls_category.jpg" alt="bowl image">
+                     <img src="img/bowls_category.jpg" alt="bowl image">
                  </div>
                  <h3>Bowls</h3>
                  <p>Find bowl recipes. From fruit to oat bowls options.</p>
-                 <button type="button" class="recipe-category-btn">Show me recipes!</button>
+                 <button type="button" class="recipe-category-btn" id="bowls-category-btn">Show me recipes!</button>
              </div>
          </article>
+         <div id = "mostra-content-api"></div>
         
          <article class = "recipe-category">
             <div>
                 <div>
-                    <img src="/img/smoothies_category.jpg" alt="smoothie image">
+                    <img src="img/smoothies_category.jpg" alt="smoothie image">
                 </div>
                 <h3>Smoothies</h3>
                 <p>Find amazing smomothies recipes made of fruits or vegetables.</p>
-                <button type="button" class="recipe-category-btn">Show me recipes!</button>
+                <button type="button" class="recipe-category-btn" onclick="location.href='http://127.0.0.1:5500/recipes.html'">Show me recipes!</button>
             </div>
         </article>
 
         <article class = "recipe-category">
             <div>
                 <div>
-                    <img src="/img/stuffed_category.jpg" alt="stuffed breakfast image">
+                    <img src="img/stuffed_category.jpg" alt="stuffed breakfast image">
                 </div>
-                <h3>Stuffed breakfast</h3>
-                <p>Maybe you prefer warm and cremy breakfast options</p>
-                <button type="button" class="recipe-category-btn">Show me recipes!</button>
+                <h3>Cooked</h3>
+                <p>Maybe you prefer warm and creamy breakfast options</p>
+                <button type="button" class="recipe-category-btn" onclick="location.href='http://127.0.0.1:5500/recipes.html'">Show me recipes!</button>
             </div>
         </article>
       </div>
      </section>
+
+     <script src="scripts/api.js"></script>
   </body>
 </html>

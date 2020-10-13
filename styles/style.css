@@ -45,7 +45,7 @@ body {
 
 /* home - background picture */
 .presentation{
-    background: url(/img/smoothies_category.jpg);
+    background: url(../img/smoothies_category.jpg);
     background-position:0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -210,7 +210,7 @@ hr{
   /* recipe-product page */
 
 .recipe-extended-info-background{
-    background: url(/img/smoothies_category.jpg);
+    background: url(../img/smoothies_category.jpg);
     background-position:0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -341,7 +341,7 @@ hr{
 /* faq page */
 
 .faq-background{
-    background: url(/img/smoothies_category.jpg);
+    background: url(../img/smoothies_category.jpg);
     background-position:0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -349,34 +349,61 @@ hr{
     position: relative;
 }
 
-.dropdown{
+.accordion{
     position: absolute;
     left: 50%;
-    top:55%;
+    top:65%;
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1em;
+    width: 90%;
 }
 
-.dropdown-btn{
-    text-decoration: none;
+.card{
+    padding:20px;
     background-color: white;
-    color:black;
-    padding:5px 80px;
-    margin:10px;
     border:none;
-    opacity: 0.7;
+    margin:20px;
+    opacity:0.7;
 }
 
-.dropdown-answer > p{
+.card-header{
+    text-decoration: none;
+    border-bottom: none;
+    background-color: white;
+}
+
+.collapse button{
+    color:red;
+}
+.card-header button{
+    color:black;
+    font-size: 1em;
+    margin-top:20px;
+}
+
+.card-header button.expanded{
+    color:Red;
+}
+
+.card-header button:hover{
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+}
+
+.card-body{
     font-size: 1.5em;
-    margin-bottom: 15px;
+    font-family: "Karla" , "sans serif";
+    line-height: 18px;
+    margin-top: 90px;
+    color:black;
 }
 
 .faq h2{
     position: absolute;
     left: 50%;
-    top:25%;
+    top:30%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2em;
