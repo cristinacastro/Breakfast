@@ -94,7 +94,7 @@ showSuccessMessage = () => {
 
     if (errorsStringsArr.length > 1){
         return;
-    }
+    }   
 
     const successMessageP = document.createElement('p');
     successMessageP.innerHTML="La cuenta ha sido creada con éxito";

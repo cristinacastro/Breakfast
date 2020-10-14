@@ -35,10 +35,10 @@
       <section class = "search-form-section">
           <div>
               <h2>What's your favorite ingredient?</h2>
-              <form action="" method="get" class="search-form">
+              <form action="" method="get" class="search-form" id="buscador-form">
                 <label for="search"></label>
                 <input type="text" id="ingredient-search" name="search" placeholder="I'm in the mood for...">
-                <button type="submit">Search</button>
+                <button type="submit" id="buscador">Search</button>
               </form>
           </div>
       </section>
@@ -53,16 +53,17 @@
       </div> -->
       <div class = "categories-container">
          <article class = "recipe-category">
+           <div id= "mostra-content-api"></div>
              <div>
                  <div>
                      <img src="img/bowls_category.jpg" alt="bowl image">
                  </div>
                  <h3>Bowls</h3>
                  <p>Find bowl recipes. From fruit to oat bowls options.</p>
-                 <button type="button" class="recipe-category-btn" id="bowls-category-btn">Show me recipes!</button>
+                 <button type="button" class="recipe-category-btn" id="input-button bowls">Show me recipes!</button>
              </div>
+
          </article>
-         <div id = "mostra-content-api"></div>
         
          <article class = "recipe-category">
             <div>
@@ -71,7 +72,7 @@
                 </div>
                 <h3>Smoothies</h3>
                 <p>Find amazing smomothies recipes made of fruits or vegetables.</p>
-                <button type="button" class="recipe-category-btn" onclick="location.href='http://127.0.0.1:5500/recipes.html'">Show me recipes!</button>
+                <button type="button" class="recipe-category-btn" id="input-button smoothies">Show me recipes!</button>
             </div>
         </article>
 
@@ -82,12 +83,17 @@
                 </div>
                 <h3>Cooked</h3>
                 <p>Maybe you prefer warm and creamy breakfast options</p>
-                <button type="button" class="recipe-category-btn" onclick="location.href='http://127.0.0.1:5500/recipes.html'">Show me recipes!</button>
+                <button type="button" class="recipe-category-btn" id="input-button cooked">Show me recipes!</button>
             </div>
         </article>
       </div>
      </section>
+     <section>
+       <div class="recipes-list"></div>
+     </section>
 
      <script src="scripts/api.js"></script>
+
+     
   </body>
 </html>

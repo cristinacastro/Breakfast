@@ -51,6 +51,7 @@ body {
     background-size: cover;
     height:80vh;
     position: relative;
+    width: 100%;
 }
 
 .presentation h1 {
@@ -267,7 +268,8 @@ hr{
 }
 
 .button:disabled{
-    background-color: rgb(138, 138, 138);
+    background-color: rgb(218, 218, 218);
+    border:none;
 }
 
 .form-wrapper{
@@ -292,6 +294,19 @@ hr{
     font-size: 1.7em;
     text-align: right;
     margin:10px;
+}
+
+.message-container{
+    margin: 0 auto 160px auto;
+}
+
+.message-container p{
+    font-size: 1.4em;
+}
+
+.message-container p.correct-message {
+    margin: 0 auto 160px auto;
+    background-color: rgb(86, 156, 118);
 }
 
 /* Log in page */
