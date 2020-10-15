@@ -35,10 +35,10 @@
       <section class = "search-form-section">
           <div>
               <h2>What's your favorite ingredient?</h2>
-              <form action="" method="get" class="search-form" id="buscador-form">
+              <form method="get" class="search-form" id="buscador-form">
                 <label for="search"></label>
                 <input type="text" id="ingredient-search" name="search" placeholder="I'm in the mood for...">
-                <button type="submit" id="buscador">Search</button>
+                <button onclick="loadDate()" type="submit" id="buscador">Search</button>
               </form>
           </div>
       </section>
@@ -51,16 +51,15 @@
         <img src="img/smothie-icon-jpg" alt="Bowl icon" class= "category-icon">
         <img src="img/stuffed-icon.jpg" alt="Bowl icon" class= "category-icon">
       </div> -->
-      <div class = "categories-container">
+      <div class = "categories-container">        
          <article class = "recipe-category">
-           <div id= "mostra-content-api"></div>
              <div>
                  <div>
                      <img src="img/bowls_category.jpg" alt="bowl image">
                  </div>
                  <h3>Bowls</h3>
                  <p>Find bowl recipes. From fruit to oat bowls options.</p>
-                 <button type="button" class="recipe-category-btn" id="input-button bowls">Show me recipes!</button>
+                 <button type="button" class="recipe-category-btn" id="input-button-bowls">Show me recipes!</button>
              </div>
 
          </article>
@@ -72,7 +71,7 @@
                 </div>
                 <h3>Smoothies</h3>
                 <p>Find amazing smomothies recipes made of fruits or vegetables.</p>
-                <button type="button" class="recipe-category-btn" id="input-button smoothies">Show me recipes!</button>
+                <button type="button" class="recipe-category-btn" id="input-button-smoothies">Show me recipes!</button>
             </div>
         </article>
 
@@ -83,17 +82,17 @@
                 </div>
                 <h3>Cooked</h3>
                 <p>Maybe you prefer warm and creamy breakfast options</p>
-                <button type="button" class="recipe-category-btn" id="input-button cooked">Show me recipes!</button>
+                <button type="button" class="recipe-category-btn" id="input-button-cooked">Show me recipes!</button>
             </div>
         </article>
       </div>
      </section>
-     <section>
-       <div class="recipes-list"></div>
-     </section>
+     <section id= "mostra-content-api"></section>
+
 
      <script src="scripts/api.js"></script>
 
+ 
      
   </body>
 </html>
