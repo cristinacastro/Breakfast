@@ -51,38 +51,146 @@ btn.addEventListener('click', async (event) => {
 
 
 
-//busqueda per ingredient , tag query
-//const recipeByIngredientUrl = "https://api.spoonacular.com/recipes/complexSearch?query=blueberries&type=breakfast&intolerances=gluten&apiKey=27037c15739e4f6c8111110f219e058b";
-//busqueda general ja amb els tags ajustats a les receptes de la app
-const recipesUrl = "https://api.spoonacular.com/recipes/complexSearch?type=breakfast&intolerances=gluten&apiKey=27037c15739e4f6c8111110f219e058b";
-//busqueda per id per formar nous objectes/arrays amb les receptes concretes de cada catgoria
-//const recipeByIdUrl = "https://api.spoonacular.com/recipes/850397/information?apiKey=27037c15739e4f6c8111110f219e058b&ingredientWidget.json";
 
-/* btn id = "bowls-category-btn"  botón para ir a la pág recetas y si es posible que el usuario aparezca en la altura de categoria pertinente
-btn id = "smoothies-category-btn"
-btn id = "cooked-category-btn" */
-
-//necesito hacer un nuevo array/objecto con estos id para desplegarlos en la pág recipes
+    
 
 
-// filter per grups de categories:
-//console.log(recipesJson.results.filter(x=>x.id===663845 || x.id===660227))
-/* const bowlsArr = recipesJson.results.filter(x=>x.id===647261 || x.id===1095752 || x.id===639131 || x.id===1095771  || x.id===663853 || x.id===637705)
-
-const smoothiesArr = recipesJson.results.filter(x=>x.id===638825 || x.id===1096176 || x.id===655786 || x.id===1096178  || x.id===641411 || x.id===650485 || x.id===645530 || x.id===660227)
-
-const cookedArr = recipesJson.results.filter(x=>x.id===643514 || x.id===1096257 || x.id===1096166 || x.id===1096262  || x.id===665734 || x.id===664280 || x.id===1096024) */
+    //SUBFUNCIONS PER GETRECIPES EN UNA MATEIXA FUNCIO
 
 
-
-
-//div id = "recipe-general-info-list" lugar para mostrar info de todas las recetas de x categoría en la pág recipes
-           /*      <div class = "recipe-general-info" id="recipe-general-info-list">
-                    <div>
-                        <img src="img/smoothies_category.jpg" alt="">
-                    </div>
-                    <h4>Recipe Name</h4>
-                    <button type="button" id="recipe-general-info-btn">See recipe</button>
-                </div>
- */
-//btn id = "recipe-general-info-btn" para clicar e ir a la explicación detallada de x receta en la pag recipe-product
+    function getRecipes() {
+        const section = document.getElementById('mostra-content-api')//aqui agafem el lloc on volem desplegar la info
+    
+        fetch("https://api.spoonacular.com/recipes/complexSearch?intolerances=gluten&type=breakfast&number=200&apiKey=27037c15739e4f6c8111110f219e058b")
+    
+        .then((response) => {
+    
+            const recipesJson = response.json()    
+            
+        
+    
+            const bowlsArr = recipesJson.results.filter(x=>x.id===647261 || x.id===1095752 || x.id===639131 || x.id===1095771  || x.id===663853 || x.id===637705)
+            const smoothiesArr = recipesJson.results.filter(x=>x.id===638825 || x.id===1096176 || x.id===655786 || x.id===1096178  || x.id===641411 || x.id===650485 || x.id===645530 || x.id===660227)
+            const cookedArr = recipesJson.results.filter(x=>x.id===643514 || x.id===1096257 || x.id===1096166 || x.id===1096262  || x.id===665734 || x.id===664280 || x.id===1096024)
+                
+            return recipesJson
+    
+            })
+        
+                .then((data) => {
+                    console.log(data);
+                     //section.innerHTML = "";
+                     const bowlsDiv = document.createElement("div")
+                     section.appendChild(bowlsDiv)
+                     const smoothiesDiv = document.createElement("div")
+                     section.appendChild(smoothiesDiv)
+                     const cookedDiv = document.createElement("div")
+                     section.appendChild(cookedDiv)
+                     
+    
+                     data.items.forEach((recipe) => { //fem un map per filtrar el id de la recepta amb el de les meves arrays personalitzades
+                        bowlsArr.map(element => {
+                            if(element.id === recipe.id){
+                                const article = document.createElement('article');
+                             article.innerHTML = ` 
+                            <h2>${recipe.title}</h2>
+                            ${image}
+                            <a href=#recipe-product.html"> <button class="recipe-category-btn >See recipe</button></a>
+                            `;
+                                bowlsDiv.appendChild(article);
+                            }
+                        } )
+    
+                        smoothiesArr.map(element => {
+                            if(element.id === recipe.id){
+                                const article = document.createElement('article');
+                             article.innerHTML = ` 
+                            <h2>${recipe.title}</h2>
+                            ${image}
+                            <a href=#recipe-product.html"> <button class="recipe-category-btn >See recipe</button></a>
+                            `;
+                                smoothiesDiv.appendChild(article);
+                            }
+                        })
+    
+                        cookedArr.map(element => {
+                            if(element.id === recipe.id){
+                                const article = document.createElement('article');
+                             article.innerHTML = ` 
+                            <h2>${recipe.title}</h2>
+                            ${image}
+                            <a href=#recipe-product.html"> <button class="recipe-category-btn >See recipe</button></a>
+                            `;
+                                cookedDiv.appendChild(article);
+                            }
+                        })
+    
+    
+                    })
+            })
+           
+            .catch((err) => {})
+    }
+    
+    
+    //botons per cada categoria. 
+    
+    
+    const divBowlsGen = document.getElementsByTagName("div")[5]
+    const divBowlsExpand = document.createElement("div")
+    divBowlsExpand.style.backgroundColor ="red"
+    divBowlsExpand.style.height= "200px"
+    divBowlsGen.appendChild(divBowlsExpand)
+    divBowlsExpand.style.display = "none"
+    
+    const bowlsButton = document.getElementById('input-button-bowls')
+    
+    bowlsButton.onclick = function (){
+        if(divBowlsExpand.style.display=== "none"){
+            divBowlsExpand.style.display="block"
+                 
+    
+        } else{
+            divBowlsExpand.style.display= "none"
+        }
+    };
+    
+     
+    const divSmoothiesGen = document.getElementsByTagName("div")[8]
+    const divSmoothiesExpand = document.createElement("div")
+    divSmoothiesExpand.style.backgroundColor ="red"
+    divSmoothiesExpand.style.height= "200px"
+    divSmoothiesGen.appendChild(divSmoothiesExpand)
+    divSmoothiesExpand.style.display = "none"
+    
+    const smoothiesButton = document.getElementById('input-button-smoothies')
+    
+    smoothiesButton.onclick = function (){
+        if(divSmoothiesExpand.style.display=== "none"){
+            divSmoothiesExpand.style.display="block"
+            
+        } else{
+            divSmoothiesExpand.style.display= "none"
+        }
+    };
+    
+     
+    const divCookedGen = document.getElementsByTagName("div")[11]
+    const divCookedExpand = document.createElement("div")
+    divCookedExpand.style.backgroundColor ="red"
+    divCookedExpand.style.height= "200px"
+    divCookedGen.appendChild(divCookedExpand)
+    divCookedExpand.style.display = "none"
+    
+    const cookedButton = document.getElementById('input-button-cooked')
+    
+    cookedButton.onclick = function (){
+        if(divCookedExpand.style.display=== "none"){
+            divCookedExpand.style.display="block"
+            divCookedExpand.innerHTML=cookedDiv.innerHTML
+    
+        } else{
+            divCookedExpand.style.display= "none"
+        }
+    };
+    

@@ -135,6 +135,7 @@ h3{
     font-size: 2em;
     text-align: center;
     color:black; 
+    margin: 20px 100px 0px 100px;
 }
 
 .recipe-category p{
@@ -159,6 +160,8 @@ h3{
     margin-top:10px;
 }
 
+
+
   /* recipes page */
 
 .categories-displayed {
@@ -166,11 +169,11 @@ h3{
 }
 
 .recipes-container {
-        display:flex;
-        justify-content:center;
-        flex-direction:row;
-        flex-wrap:wrap;  
-        margin-bottom:30px;
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    flex-wrap:wrap;  
+    margin-bottom:30px;
 }
 
 .recipe-general-info {
@@ -196,6 +199,7 @@ h3{
     margin: 7px;
     border: solid 1px black;
 }
+
 
 h4{
     font-size: 1.5em;
