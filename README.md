@@ -1,44 +1,47 @@
 
-# Project 1
+![](img/logo-mini.jpg)
 
-In Project1 app you will find recipes to make varied healthy breakfast. If you're done with cheese and jam sandwitch Project1 offers you alternatives to the typical breakfast menu still present in every coffee shop and bar. And last but not least, all our recipes include no cereal! 
+![](img/readme-heading-img.jpeg)
 
-***Project1*** was developed using JavaScript as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-092029) using the [Spoonacular](https://spoonacular.com/) API.
+In Breakfas.t app you will find recipes to make varied healthy breakfast. If you're done with cheese and jam sandwitch Breakfas.t offers you alternatives to the typical breakfast menu still present in every coffee shop and bar. And last but not least, all our recipes are gluten free! 
+
+***Breakfas.t*** was developed using JavaScript as part of the [Ironhack](https://www.ironhack.com/) developer bootcamp (WebDev-FT-092029) using the [Spoonacular](https://spoonacular.com/) API.
 
 ## Minimum Viable Product
 
 The __MVP__ will cover the following:
 
 - __Homepage:__ The homepage will present the apps concept and features and provide links to the rest of the site. A user will be able to search the recipe database by introducing his favorite ingredient or by selecting among different categories.
-- __Landing Page1:__ All recipes related to the previous search will be deployed.
-- __Landing Page2:__ The user will find the detaills of the selected recipe.
-- __FAQ:__ Everything you always wanted to know about ***Project1*** but were too afraid to ask.
+- __Recipes Page:__ All recipes related to the previous search will be displayed.
+- __Recipes Product Page:__ The user will find the details of the selected recipe.
+- __FAQ:__ Find the answers to breakfast recipes doubts.
 - __Signup:__ A registration form for new users.
 - __Login:__ A sign in form for existing users.
 
 ## Backlog ##
 
-- Recipe cost calculation
-- Recipe video
+- New filters as difficulty and recipe cost
+- Product detail recipe page
 
 ## Data Structure ##
 - **root/**
      - index.html
-     - myapp.html
+     - recipes.html
      - faq.html
-     - register.html
-     - signin.html
+     - signup.html
+     - login.html
      - **css/**
           - style.css
      - **js/**
-          - main.js
-          - Signup.js
-          - User.js
-          - Validator.js
-          - spoonacularApi.js
+          - api.js
+          - signup.js
+          - user.js
+          - validator.js
+          - login.js
+          - categories.js
+          - database.js
      - **assets/**
-          - img/
-          - fonts/
+          - img
 
 ## Wireframes
 
