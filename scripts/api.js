@@ -1,4 +1,4 @@
-
+'use strict'
 
 const urlParams = new URLSearchParams(window.location.search); 
 const buscadorInput = urlParams.get('search');
@@ -21,7 +21,6 @@ function loadDate (){
         buscador.addEventListener('submit', (event) => {
             event.preventDefault();
             loadDate();
-            //getInputsByValue(buscadorInput);
         }); 
         
 
@@ -36,12 +35,12 @@ function getInputsByValue(buscador) {
         })
         .then((data) => {
             console.log(data);
-            const section = document.getElementById("recipes-list"); //"recipes-list" page recipes o "mostra-content-api" a linici
+            const section = document.getElementById("recipes-list"); 
             section.className = "categories-displayed";
             section.innerHTML = "";
           
-            var h3Tag = document.createElement("H3")                // Create a <h1> element
-            var text = document.createTextNode(`These are some recipes with ${buscador}`);     // Create a text node
+            var h3Tag = document.createElement("H3")             
+            var text = document.createTextNode(`These are some recipes with ${buscador}`);   
             h3Tag.appendChild(text);  
             section.appendChild(h3Tag);
             var hrTag= document.createElement("hr")

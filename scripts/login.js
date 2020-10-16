@@ -1,49 +1,64 @@
 'use strict';
 
-class Login{
-    constructor (){
-        this.emailInput = document.querySelector("#email");
-        this.passwordInput = document.querySelector("#password");
-        this.loginButton = document.querySelector("#login-button");
-        this.messageContainer = document.querySelector(".message-container")
+class Login {
+  constructor() {
+    this.emailInput = document.querySelector("#email");
+    this.passwordInput = document.querySelector("#password");
+
+    this.loginButton = document.querySelector("#login-button");
+    this.messageContainer = document.querySelector(".message-container");
+  }
+
+  // gestionar el envio de los datos (evento "submit")
+  submit = (event) => {
+    event.preventDefault();
+
+    const usersDB = db.getAllUsers();
+
+    const email = this.emailInput.value;
+    const password = this.passwordInput.value;
+
+    // Intentar encontrar el usuario
+    const user = usersDB.find( (userObj) => {
+      if (userObj.email === email && userObj.password === password) {
+        return true;
+      }
+    })
+
+
+    this.showMessage(user);
+  }
+
+  // mostrar el mensaje de error o mensaje de exito
+  showMessage = (user) => {
+    // eliminar el mensaje previo
+    this.messageContainer.innerHTML = "";
+
+    const message = document.createElement('p');
+
+    if (user) {
+      // si el usuario inicia la sesion con exito
+      // agrega la clase para cambiar el color y sobrescribir el estilo anterior
+      message.innerHTML = `hola, ${user.email}`;
+      message.classList.add("correct-message");
+    }
+    else {
+      // si el inicio de sesión no se ha realizado correctamente
+      message.innerHTML = 'el email o/y password son incorectos';
     }
 
-    submit = (event) => {
-        event.preventDefault(); //evitem que la pàgina es recarregui, ja que no enviem realment les dades enlloc, al no recarregar no perdem la informació
-        //des de la base de dades comprovem l'enviament de les dades del input
-        const userDB = db.getAllUsers();
+    this.messageContainer.appendChild(message);
 
-        const email = this.emailInput.value;
-        const password = this.passwordInput.value;
+    if (user) this.redirect();
+  }
 
-        // ara mirem si les dades exiseixen
-        const user = userDB.find((userObj) => {
-            if(userOBj.email === email && userObj.password === password){
-                return true;
-            }
-        })
-        this.showMessage(user);
-    }
-        //configurem el missatge
+  redirect = () => {
+    setTimeout( ()=> location.assign('index.html'), 3000);
+  }
 
-    showMessage = (user) => {
-        this.messageContainer.innerHTML="";
-        const message = document.createElement('p');
-        if(user){ //if user vol dir que esta validat, es a dir que existeix
-            message.innerHTML=`Hola, ${user.email}`;
-            message.classList.add("correct-message");
-        } else {
-            message.innerHTML="El email y/o password son incorrectos";
-        }
-        this.messageContainer.appendChild(message);
-        
-        if(user) this.redirect();
-    }
-
-    redirect = () => {
-        setTimeout ( () => location.assign('index.html'), 3000);
-    }
 }
 
+
 const login = new Login();
+
 login.loginButton.addEventListener("click", login.submit);

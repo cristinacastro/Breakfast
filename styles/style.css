@@ -35,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    font-size: 1.5em; 
+    font-size: 1.6em; 
 }
 
 .nav-bar-ul a {
@@ -55,7 +55,7 @@ body {
 }
 
 .presentation h1 {
-    font-size: 4em;
+    font-size: 5em;
     color:black;
     position: absolute;
     left: 50%;
@@ -63,18 +63,21 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1em;
+    z-index: 999; 
+
 }
 
 .presentation h2{
-    font-size: 2em;
-    color: black;
+    font-size: 2.5em;
+    color:black;
     position: absolute;
     left: 50%;
-    top:55%;
+    top:60%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     width: 50%;
-    text-align: center;
+    text-align: center; 
+    z-index: 999; 
 }
 
  /* home - input form section */
@@ -86,7 +89,7 @@ body {
  }
 
  .search-form-section h2 {
-    font-size: 2em;
+    font-size: 2.3em;
     text-align: center;
     width: 60%;
     justify-content: center;
@@ -104,12 +107,16 @@ body {
  }
 
  .search-form ::placeholder {
-     font-size: 0.8em;
+     font-size: 1.1em;
      text-align: center;
  }
 
+ .search-form input {
+     padding:10px;
+ }
+
  .search-form > button {
-    margin: 15px 50px;
+    margin: 18px 50px;
     font-size: 1.3em;
     font-family: montserrat;
     font-weight: bold;
@@ -160,12 +167,29 @@ h3{
     margin-top:10px;
 }
 
+  /* footer */
+footer{
+    margin: 100px 0 30px 0;
+}
+
+footer img{
+    width: 120px;
+    display: flex;
+    margin: 0 auto;
+}
+
+footer p{
+    color:black;
+    font-size: 1.4em;
+    text-align: center;
+}
 
 
   /* recipes page */
 
 .categories-displayed {
     background-color: whitesmoke;
+    padding:5px 0 5px 0;
 }
 
 .recipes-container {
@@ -257,12 +281,15 @@ hr{
 
 .signup-form input{
     margin:10px;
+    padding:10px;
+    font-size:1.5em;
 }
+
 .button{
     display:flex;
     flex-direction: column;
     margin: 10px auto;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-family: montserrat;
     font-weight: bold;
     background-color: black;
@@ -308,15 +335,22 @@ hr{
     font-size: 1.4em;
 }
 
+
 .message-container p.correct-message {
     margin: 0 auto 160px auto;
-    background-color: rgb(86, 156, 118);
+    background-color: rgb(77, 136, 77);
 }
 
 /* Log in page */
 
 .login-form input{
     margin:10px;
+    padding:10px;
+    font-size: 1.5em;
+}
+
+.login-form button{
+    font-size: 1.5em;
 }
 
 .login h2{
@@ -343,14 +377,14 @@ hr{
 }
 
 .message-container p{
-    background-color:red;
+    background-color:rgb(209, 65, 65);
     padding: 20px;
     margin: 10px 0;
     color: white;
 }
 
 .message-container p.correct-message {
-    background-color: green;
+    background-color: rgb(77, 136, 77);
     color:white;
     margin:10px 0;
     padding: 20px;

@@ -1,7 +1,6 @@
+'use strict'
 
 //RESULTATS PER CATEGORIES
-
-
 
  //funció per rebre receptes filtrades de la categoria de bowls
 
