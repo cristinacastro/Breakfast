@@ -403,7 +403,7 @@ hr{
     background-position:0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height:85vh;
+    height:120vh;
     position: relative;
 }
 
@@ -429,7 +429,7 @@ hr{
     text-decoration: none;
     border-bottom: none;
     background-color: white;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .collapse button{
@@ -437,8 +437,12 @@ hr{
 }
 .card-header button{
     color:black;
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin-top:20px;
+}
+
+.mb-0 {
+    width: 90%;
 }
 
 .card-header button.expanded{
@@ -451,7 +455,7 @@ hr{
     text-decoration: none;
 }
 
-.card-body{
+.card-body {
     font-size: 1.7em;
     font-family: "Karla" , "sans serif";
     line-height: 18px;
@@ -465,8 +469,9 @@ hr{
     top:30%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 2em;
+    font-size: 1.7em;
 }
+
 
 
 /* @media */
