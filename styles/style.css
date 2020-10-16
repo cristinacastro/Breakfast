@@ -43,6 +43,11 @@ body {
     color: black;
 }
 
+.nav-bar-ul a:hover {
+    color: rgb(104, 104, 104);
+}
+
+
 /* home - background picture */
 .presentation{
     background: url(../img/smoothies_category.jpg);
