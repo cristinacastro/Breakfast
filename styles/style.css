@@ -351,11 +351,11 @@ hr{
 .login-form input{
     margin:10px;
     padding:10px;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 .login-form button{
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 .login h2{
@@ -429,6 +429,7 @@ hr{
     text-decoration: none;
     border-bottom: none;
     background-color: white;
+    font-size: 2em;
 }
 
 .collapse button{
@@ -436,7 +437,7 @@ hr{
 }
 .card-header button{
     color:black;
-    font-size: 1em;
+    font-size: 1.4em;
     margin-top:20px;
 }
 
@@ -451,7 +452,7 @@ hr{
 }
 
 .card-body{
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-family: "Karla" , "sans serif";
     line-height: 18px;
     margin-top: 90px;
