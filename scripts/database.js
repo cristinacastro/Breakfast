@@ -1,13 +1,12 @@
 'use strict'
 
 class Database {
-  // recuperar els usuaris (array)
   getAllUsers = () => {
     const usersStr = localStorage.getItem("users");
     const usersArr = JSON.parse(usersStr);
 
     if (usersArr === null) {
-      return []; // si no hi ha usuaris tornarà una array buida
+      return []; 
     } else {
       return usersArr;
     }

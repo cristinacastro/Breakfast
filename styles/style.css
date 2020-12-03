@@ -72,16 +72,19 @@ body {
 
 }
 
-.presentation h2{
+h2 {
     font-size: 2.5em;
     color:black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.presentation h2{
     position: absolute;
     left: 50%;
     top:60%;
     transform: translate(-50%, -50%);
     font-weight: bold;
-    width: 50%;
-    text-align: center; 
     z-index: 999; 
 }
 
@@ -94,11 +97,6 @@ body {
  }
 
  .search-form-section h2 {
-    font-size: 2.3em;
-    text-align: center;
-    width: 60%;
-    justify-content: center;
-    margin:0 auto;
     padding:20px;
     font-weight: bold;
  }
@@ -141,31 +139,6 @@ body {
     margin: 10px 12px;
 }
 
-h3{
-    padding: 10px;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: center;
-    color:black; 
-    margin: 20px 100px 0px 100px;
-}
-
-.recipe-category p{
-    font-size: 1.5em;
-    margin: 0px 30px;
-}
-
-.recipe-category-btn{
-    width: 65%;
-    margin: 15px auto;
-    font-size: 1.3em;
-    font-family: montserrat;
-    font-weight: bold;
-    letter-spacing:0.3px;
-    background-color: black;
-    color: white;
-    padding:10px 10px 10px 10px;
-}
 
 .recipe-category img{
     width: 100%;
@@ -192,47 +165,53 @@ footer p{
 
   /* recipes page */
 
+
 .categories-displayed {
-    background-color: whitesmoke;
     padding:5px 0 5px 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .recipes-container {
     display:flex;
-    justify-content:center;
-    flex-direction:row;
-    flex-wrap:wrap;  
-    margin-bottom:30px;
+    flex-wrap: wrap;  
+    width: 100%;
+    margin: 0px 10px 0px 10px;
 }
 
 .recipe-general-info {
     text-align:center;
     box-sizing:border-box;
-    margin: 5px;
-    padding:12px;
-    width:43%;
+    margin: 5px 5px 5px 5px;
+    width:45%;
+    padding: 25px 15px 25px 15px;
+    background-color: rgb(240, 240, 240);
   }
 
 .recipe-general-info-list img{
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
 }
 
 .recipe-general-info button{
-    font-size: 1.1em;
-    font-family: montserrat;
+    font-size: 1em;
     font-weight: bold;
+    letter-spacing: 1.3px;
     background-color: rgb(241, 241, 241);
     color: black;
-    padding:3px 7px;
-    margin: 7px;
+    padding:5px 5px;
     border: solid 1px black;
+    margin-bottom: 5px;
+}
+.recipe-general-info button:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
 }
 
-
 h4{
-    font-size: 1.5em;
-    margin-bottom: 5px;
+    font-size: 1.7em;
+    margin: 5px;
 }
 
 hr{
@@ -290,23 +269,6 @@ hr{
     font-size:1.5em;
 }
 
-.button{
-    display:flex;
-    flex-direction: column;
-    margin: 10px auto;
-    font-size: 1.5em;
-    font-family: montserrat;
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    padding:10px 20px 10px 20px;
-    margin-bottom: 10px;
-}
-
-.button:disabled{
-    background-color: rgb(218, 218, 218);
-    border:none;
-}
 
 .form-wrapper{
     align-items: center;
@@ -528,10 +490,6 @@ hr{
        padding:10px 60px;   
     }
 
-    .recipe-category-btn{
-        margin: 15px auto 10px auto;
-        width: 42%;
-    }
 
     .recipe-extended-info-background{
         height: 65vh;
@@ -563,8 +521,16 @@ hr{
         margin:15px;
     }
 
+    .category-text {
+        display:flex;
+        align-items: left;
+        padding:10px;
+        margin
+
+    }
     .recipe-category {
-        width: 33%;
+        width: 80%;
+        display: flex;
     }
     
     .recipe-category div{
@@ -577,6 +543,26 @@ hr{
 
     .recipe-extended-info-background{
         height: 95vh;
+    }
+
+    .recipes-container {
+        display:flex;
+        flex-wrap: wrap;  
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .recipe-general-info {
+        text-align:center;
+        box-sizing:border-box;
+        margin: 15px 15px 15px 15px;
+        width:30%;
+      }
+    
+    .recipe-general-info button{
+        font-size: 1.2em;
+        padding:6px 7px;
+       
     }
 
     .icon-format img{
@@ -615,9 +601,35 @@ hr{
         margin-top: 55px;
     }
 
-    .button {
-        font-size: 1.6em;
-        padding:10px 30px;
-        margin:25px auto 40px auto;
+    .presentation h1{
+        font-size: 10em;
     }
 
+     h2 {
+        font-size:4em;
+    }
+
+    h3{
+        font-weight: bold;
+        font-size: 3.5em;
+        color:black; 
+        text-align:left;
+        margin-bottom: 12px;
+    }
+    
+    .recipe-category p{
+        font-size: 2.5em;
+        text-align: left;
+        margin-bottom: 12px;
+
+    }
+    
+    .recipe-category-btn{
+        font-size: 1.8em;
+        font-weight: bold;
+        letter-spacing:0.7px;
+        background-color: black;
+        color: white;
+        padding: 7px 0px 7px 0px;
+    }
+}
