@@ -6,7 +6,6 @@ const buscadorInput = urlParams.get("search");
 //RESULTATS PER BUSCADOR
 
 const buscador = document.querySelector("#buscador-form");
-//console.log(buscador);
 const btnId = document.getElementById("ingredient-search");
 
 function loadDate() {
@@ -29,7 +28,6 @@ function getInputsByValue(buscador) {
       return response.json();
     })
     .then((data) => {
-      //console.log(data);
       const section = document.getElementById("recipes-list");
       section.className = "categories-displayed";
       section.innerHTML = "";
@@ -55,7 +53,7 @@ function getInputsByValue(buscador) {
                     <h4>${recipe.title}</h4>
                     <button class="recipe-general-info">SEE RECIPE</button>
                 `;
-                divContainer.appendChild(div);
+        divContainer.appendChild(div);
       });
     })
 

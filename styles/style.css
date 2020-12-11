@@ -82,7 +82,7 @@ h2 {
 .presentation h2{
     position: absolute;
     left: 50%;
-    top:60%;
+    top:70%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     z-index: 999; 
@@ -97,8 +97,7 @@ h2 {
  }
 
  .search-form-section h2 {
-    padding:20px;
-    font-weight: bold;
+    padding:10px;
  }
 
  .search-form{
@@ -131,19 +130,62 @@ h2 {
 
   /* home- recipes cagetories section */
 
-.recipe-category div{
+  .categories {
+      background-color:rgb(240, 240, 240);
+      padding-bottom: 20px;
+  }
+  .categories h2 {
+    padding:30px;
+ }
+  .each-category-recipe {
     display:flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: 10px 12px;
-}
-
-
-.recipe-category img{
+    flex-wrap: wrap;  
     width: 100%;
-    margin-top:10px;
+    justify-content: center;  
 }
+
+  .info-category-recipe {
+    background-color:  rgb(240, 240, 240);
+    text-align:center;
+    box-sizing:border-box;
+    margin: 10px 5px 10px 5px;
+    width:90%;
+    padding: 25px 15px 25px 15px;
+  }
+
+  .info-category-recipe img{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .info-category-recipe button{
+      color:black;
+      padding: 5px 5px;
+      width: 40%;
+      cursor: pointer;
+      background-color: transparent;
+      border:black solid 1px;
+  }
+
+  .category-text {
+      text-align: center;
+  }
+
+  h3 {
+    font-size: 2.2em;
+}
+
+  p{
+      font-size: 1.7em;
+      width: 80%;
+      margin: 0 auto;
+  }
+
+  .hr {
+      width: 15%;
+      border-bottom: 1px solid black;
+      margin:15px auto;
+  }
 
   /* footer */
 footer{
@@ -165,11 +207,14 @@ footer p{
 
   /* recipes page */
 
-
 .categories-displayed {
+    margin-top:20px;
     padding:5px 0 5px 0;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recipes-container {
@@ -183,7 +228,7 @@ footer p{
     text-align:center;
     box-sizing:border-box;
     margin: 5px 5px 5px 5px;
-    width:45%;
+    width:90%;
     padding: 25px 15px 25px 15px;
     background-color: rgb(240, 240, 240);
   }
@@ -472,7 +517,11 @@ hr{
     }
     
     .presentation h1{
-        top:40%;
+        top:45%;
+    }
+
+    .presentation h2{
+        top:63%;
     }
 
     .search-form-section div{
@@ -506,11 +555,12 @@ hr{
 
     .search-form-section div{
         height: 180px;
-        margin-top: 50px;
+        margin: 50px 0 60px 0;
      }
 
     .search-form input{
         padding: 10px 100px;
+        margin: 20px;
     }
 
     .categories-container{
@@ -523,9 +573,9 @@ hr{
 
     .category-text {
         display:flex;
-        align-items: left;
+        flex-direction: column;
+        align-items: center;
         padding:10px;
-        margin
 
     }
     .recipe-category {
@@ -602,7 +652,14 @@ hr{
     }
 
     .presentation h1{
-        font-size: 10em;
+        font-size: 8em;
+        top:40%;
+        width: 65%;
+    }
+
+    .presentation h2{
+        top:66%;
+        width: 60%;
     }
 
      h2 {
@@ -611,7 +668,7 @@ hr{
 
     h3{
         font-weight: bold;
-        font-size: 3.5em;
+        font-size: 3em;
         color:black; 
         text-align:left;
         margin-bottom: 12px;
@@ -632,4 +689,15 @@ hr{
         color: white;
         padding: 7px 0px 7px 0px;
     }
+
+    .categories-displayed {
+        margin-top:60px;
+        padding:5px 0 5px 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
