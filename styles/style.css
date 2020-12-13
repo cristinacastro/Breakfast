@@ -50,7 +50,7 @@ body {
 
 /* home - background picture */
 .presentation{
-    background: url(../img/smoothies_category.jpg);
+    background: url(../img/home-img.png);
     background-position:0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,8 +68,6 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1em;
-    z-index: 999; 
-
 }
 
 h2 {
@@ -568,9 +566,11 @@ hr{
 
 @media (min-width: 1000px){
     .nav-bar{
-        width: 35%;
+        width: 20%;
         height: auto;
-        margin-right: 30px;
+        margin-right: 50px;
+        font-size: 1em;
+        letter-spacing: 0.2em;
         }
 
     .search-form-section div{
@@ -692,12 +692,13 @@ hr{
     .presentation h1{
         font-size: 8em;
         top:40%;
-        width: 65%;
+        width: 55%;
+        line-height: 0.9em;
     }
 
     .presentation h2{
         top:66%;
-        width: 60%;
+        width: 45%;
     }
 
      h2 {
