@@ -135,7 +135,7 @@ h2 {
       padding-bottom: 20px;
   }
   .categories h2 {
-    padding:30px;
+    padding-top:30px;
  }
   .each-category-recipe {
     display:flex;
@@ -150,7 +150,7 @@ h2 {
     box-sizing:border-box;
     margin: 10px 5px 10px 5px;
     width:90%;
-    padding: 25px 15px 25px 15px;
+    padding: 10px 10px 10px 10px;
   }
 
   .info-category-recipe img{
@@ -159,20 +159,32 @@ h2 {
   }
 
   .info-category-recipe button{
-      color:black;
-      padding: 5px 5px;
-      width: 40%;
-      cursor: pointer;
-      background-color: transparent;
-      border:black solid 1px;
-  }
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    background-color: rgb(241, 241, 241);
+    color: rgb(0, 0, 0);
+    padding:5px 5px;
+    border: solid 1px black;
+    margin-top: 10px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.info-category-recipe button:hover{
+    background-color: rgb(236, 236, 236);
+    color: grey;
+    border: grey solid 1px;
+}
 
   .category-text {
       text-align: center;
   }
 
-  h3 {
+  .category-text h3 {
     font-size: 2.2em;
+    text-align: center;
+    margin:30px 0 10px 0;
 }
 
   p{
@@ -189,7 +201,7 @@ h2 {
 
   /* footer */
 footer{
-    margin: 100px 0 30px 0;
+    padding: 40px 0 30px 0;
 }
 
 footer img{
@@ -207,6 +219,10 @@ footer p{
 
   /* recipes page */
 
+.info-category-recipe {
+    width: 90%;
+}
+
 .categories-displayed {
     margin-top:20px;
     padding:5px 0 5px 0;
@@ -222,6 +238,7 @@ footer p{
     flex-wrap: wrap;  
     width: 100%;
     margin: 0px 10px 0px 10px;
+    justify-content: center;
 }
 
 .recipe-general-info {
@@ -243,15 +260,16 @@ footer p{
     font-weight: bold;
     letter-spacing: 1.3px;
     background-color: rgb(241, 241, 241);
-    color: black;
+    color: rgb(0, 0, 0);
     padding:5px 5px;
     border: solid 1px black;
     margin-bottom: 5px;
+    width: 30%;
+    cursor: pointer;
 }
 .recipe-general-info button:hover{
-    background-color: black;
-    color:white;
-    cursor: pointer;
+    font-size: 1.2em;
+    letter-spacing: 1.6px;
 }
 
 h4{
@@ -539,7 +557,9 @@ hr{
        padding:10px 60px;   
     }
 
-
+    .info-category-recipe {
+        width: 45%;
+    }
     .recipe-extended-info-background{
         height: 65vh;
     }
@@ -615,6 +635,24 @@ hr{
        
     }
 
+    .info-category-recipe {
+        width: 30%;
+    }
+
+    .info-category-recipe button{
+        width: 30%;
+        font-size: 1.2em;
+        border: solid 1.3px black;
+    }
+
+    .category-text h3 {
+        font-size: 2.6em;
+    }
+    
+    p{
+        font-size: 1.8em;
+    }
+
     .icon-format img{
         width: 50px;
     }
@@ -670,7 +708,6 @@ hr{
         font-weight: bold;
         font-size: 3em;
         color:black; 
-        text-align:left;
         margin-bottom: 12px;
     }
     

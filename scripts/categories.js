@@ -29,7 +29,7 @@ async function getBowlsRecipes() {
     article.innerHTML = ` 
                             <img src= "${recipe.image}">
                             <h4>${recipe.title}</h4>
-                            <button class="recipe-general-info">SEE RECIPE</button>
+                            <button>SEE RECIPE</button>
                             `;
     bowlsDiv.appendChild(article);
   });
@@ -60,13 +60,13 @@ async function getSmoothiesRecipes() {
     smoothiesDiv.className = "each-category-recipe";
 
 
-    smoothiesDiv.forEach((recipe) => {
+    smoothiesArr.forEach((recipe) => {
           const article = document.createElement("article");
           article.className = "info-category-recipe";
           article.innerHTML = `
                     <img src= "${recipe.image}">
                     <h4>${recipe.title}</h4>
-                    <button class="recipe-general-info">SEE RECIPE</button>
+                    <button>SEE RECIPE</button>
                     `;
           smoothiesDiv.appendChild(article);
     });
@@ -97,13 +97,13 @@ async function getCookedRecipes() {
     section.className = "category-container";
     cookedDiv.className = "each-category-recipe";
 
-    cookedDiv.forEach((recipe) => {
+    cookedArr.forEach((recipe) => {
           const article = document.createElement("article");
           article.className = "info-category-recipe";
           article.innerHTML = ` 
                         <img src= "${recipe.image}">
                         <h4>${recipe.title}</h4>
-                        <button class="recipe-general-info">SEE RECIPE</button>
+                        <button>SEE RECIPE</button>
                         `;
           cookedDiv.appendChild(article);
       });
