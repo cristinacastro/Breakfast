@@ -1,111 +1,97 @@
-<!-- bea021b631584c58ab2ec7ead556f6f8
-27037c15739e4f6c8111110f219e058b
-326fca0e6fb94575ace156a7e9b4fcb6
-a3dd2f2d2e7e4a57af11d73ab6827880
-88dc5764dc764ea3b6b5c87bf1a92ef0
-a199774d457d4300bedce3cbcb603887 -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project1</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="shortcut icon" href="#" />
   </head>
 
   <body>
     <!-- Header -->
-     <header class= "header">
-       <div class="menu">
-         <div class = "logo">
-          <a href="index.html"><img src="img/logo-icon.jpg" alt="Logo icon"></a>
-         </div>
-         <nav class= "nav-bar">
-            <ul class= "nav-bar-ul">
-             <li><a class="nav-bar-item" href="signup.html">SIGN UP</a></li>
-             <li><a class="nav-bar-item" href="login.html">LOG IN</a></li>
-             <li><a class="nav-bar-item" href="faq.html">FAQ</a></li>
-            </ul>
-          </nav>
+    <header class="header">
+      <div class="menu">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="img/logo-icon.jpg" alt="Logo icon"
+          /></a>
         </div>
-        <div class= "presentation">
-            <h1>Find the breakfast that loves you.</h1>
-            <h2>No more plain sandwitches. Healty recipes. Gluten free.</h2>
-         </div>
-      </header>
+        <nav class="nav-bar">
+          <ul class="nav-bar-ul">
+            <li><a class="nav-bar-item" href="signup.html">SIGN UP</a></li>
+            <li><a class="nav-bar-item" href="login.html">LOG IN</a></li>
+            <li><a class="nav-bar-item" href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="presentation">
+        <h1>Find the breakfast that loves you.</h1>
+        <h2>No more plain sandwitches. Healty recipes. Gluten free.</h2>
+      </div>
+    </header>
 
-      <!-- Section 1 -->
+    <!-- Section 1 -->
 
-      <section class = "search-form-section">
-          <div>
-              <h2>What's your favorite ingredient?</h2>
-              <form method="get" class="search-form" id="buscador-form">
-                <label for="search"></label>
-                <input type="text" id="ingredient-search" name="search" placeholder="I'm in the mood for...">
-                <button onclick="loadDate()" type="submit" id="buscador">Search</button>
-              </form>
+    <section class="search-form-section">
+      <div>
+        <h2>What's your favorite ingredient?</h2>
+        <form method="get" class="search-form" id="buscador-form">
+          <label for="search"></label>
+          <input
+            type="text"
+            id="ingredient-search"
+            name="search"
+            placeholder="I'm in the mood for..."
+          />
+          <button onclick="loadDate()" type="submit" id="buscador">
+            Search
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+
+    <section class="categories">
+      <div>
+        <h2>Weekly suggestions</h2>
+
+        <article>
+          <div class="category-text">
+            <h3>Bowls</h3>
+            <p>Healthy bowls recipes. From fruit to oat bowls options.</p>
+            <hr class="hr" />
           </div>
-      </section>
-
-     <!-- Section 2 -->
-
-     <section class = "categories">
- <!--      <div class ="category-icons">
-        <img src="img/bowls-icon.jpg" alt="Bowl icon" class= "category-icon">
-        <img src="img/smothie-icon-jpg" alt="Bowl icon" class= "category-icon">
-        <img src="img/stuffed-icon.jpg" alt="Bowl icon" class= "category-icon">
-      </div> -->
-      <div class = "categories-container">        
-         <article class = "recipe-category">
-             <div>
-                 <div>
-                     <img src="img/bowls_category.jpg" alt="bowl image">
-                 </div>
-                 <h3>Bowls</h3>
-                 <p>Find bowl recipes. From fruit to oat bowls options.</p>
-                 <button type="button" class="recipe-category-btn" id="input-button-bowls">Show me recipes!</button>
-                 <div class="recipes-collapse" id="bowls"></div>
-             </div>
-
-         </article>
-        
-         <article class = "recipe-category">
-            <div>
-                <div>
-                    <img src="img/smoothies_category.jpg" alt="smoothie image">
-                </div>
-                <h3>Smoothies</h3>
-                <p>Find amazing smomothies recipes made of fruits or vegetables.</p>
-                <button type="button" class="recipe-category-btn" id="input-button-smoothies">Show me recipes!</button>
-                <div class="recipes-collapse" id="smoothies"></div>
-            </div>
+          <div id="bowls"></div>
         </article>
 
-        <article class = "recipe-category">
-            <div>
-                <div>
-                    <img src="img/stuffed_category.jpg" alt="stuffed breakfast image">
-                </div>
-                <h3>Cooked</h3>
-                <p>Maybe you prefer warm and creamy breakfast options</p>
-                <button type="button" class="recipe-category-btn" id="input-button-cooked">Show me recipes!</button>
-                <div class="recipes-collapse" id="cooked"></div>
-            </div>
+        <article>
+          <div class="category-text">
+            <h3>Smoothies</h3>
+            <p>Find amazing smomothies recipes made of fruits or vegetables.</p>
+            <hr class="hr" />
+          </div>
+          <div id="smoothies"></div>
+        </article>
+
+        <article>
+          <div class="category-text">
+            <h3>Cooked</h3>
+            <p>Maybe you prefer warm and creamy breakfast options</p>
+            <hr class="hr" />
+          </div>
+          <div id="cooked"></div>
         </article>
       </div>
-     </section>
+    </section>
+    <section class="categories-container" id="suggestions-expand"></section>
 
-
-     <script src="scripts/api.js"></script>
-     <script src="scripts/categories.js"></script>
-     
-    </body>
-    <footer>
-      <div><img src="img/logo-icon.jpg" alt="Logo icon"></div>
-      <p>Cristina Castro</p>
-    </footer>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/categories.js"></script>
+  </body>
+  <footer>
+    <div><img src="img/logo-icon.jpg" alt="Logo icon" /></div>
+    <p>Cristina Castro</p>
+  </footer>
 </html>
